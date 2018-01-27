@@ -11,15 +11,13 @@
 			var nacimiento= document.getElementById('nacimiento').value;
 			
 			var fecha = new Date();
-			var dia= fecha.getDate();
-			var mes= ("0" + (fecha.getMonth() + 1)).slice(-2);
-			var año_actual = fecha.getFullYear();
+			var dia= 01;//fecha.getDate();
+			var mes= 01;//("0" + (fecha.getMonth() + 1)).slice(-2);
+			var años = fecha.getFullYear()-1;
+			años -=  nacimiento;
 			
-			//var año_nacimiento = año_actual - parseInt(edad);
-			//año_nacimiento--;
-			//var años= año_actual - año_nacimiento;
 			
-			var str = 'Hola '+nombre+' de '+pais+', el día '+dia+' del mes '+mes+' tendra '+ nacimiento;
+			var str = 'Hola '+nombre+' de '+pais+', el día '+dia+' del mes '+mes+' tendra '+ años+' años';
 			actualizar_saludo(str);
 			
 			var str2= nombre+' - '+pais+' - '+dia+'/'+mes+'/'+nacimiento;
